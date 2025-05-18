@@ -74,13 +74,65 @@ A simple **Pac-Man** game developed using **OpenGL (GLUT)** with **C++**. The pl
 
 ---
 
-## 🚀 How to Run
-```bash
-g++ pacman_game.cpp -lGL -lGLU -lglut -o pacman_game
-./pacman_game
+# Stitch Game 🎮
+
+A simple 2D game built using **OpenGL** and **GLUT**, where the player controls the character **Stitch** to collect hearts and avoid knives.
+
+---
+
+## 🧩 Features
+
+### 👾 Character Rendering
+- Stitch is drawn using pixel data and a color palette.
+- Each pixel is rendered using OpenGL `quads` mapped from pixel values.
+
+### ❤️ Object Shapes
+- **Hearts**: Increase the player's score.
+- **Knives**: End the game if touched.
+
+### 🎮 Controls
+- Use **Left** and **Right Arrow Keys** to move Stitch within the screen boundaries.
+
+### 🧠 Collision Detection
+- Touching a **heart** ➝ Score increases.
+- Touching a **knife** ➝ Game Over.
+- Collect **3 hearts** ➝ You win!
+
+### 🖼️ Graphics & Background
+- Background built with **gradient-colored quads** to simulate sky and ground.
+
+---
+
+## 🔁 Game Loop
+- Uses **timers** and **GLUT callbacks** to:
+  - Continuously update object positions.
+  - Handle keyboard input.
+  - Detect collisions.
+  - Render the updated scene.
+
+---
+
+## 🛠️ How It Works
+1. Initializes a GLUT window and sets up an orthographic projection using `glOrtho`.
+2. Continuously runs the game loop:
+   - Reads keyboard inputs.
+   - Moves hearts and knives downward.
+   - Detects collisions.
+   - Updates score or shows game over.
+
+---
+
+## 🏁 Game End Conditions
+- 🎉 **"Well Done!!!"** if the player collects 3 hearts.
+- 💀 **"GAME OVER!!!"** if Stitch touches a knife.
+
+---
 
 
-## 🚀 How to Run
-```bash
-g++ harry_potter_game.cpp -lGL -lGLU -lglut -o harry_potter_game
-./harry_potter_game
+## 📦 Requirements
+- OpenGL
+- GLUT
+
+---
+
+
